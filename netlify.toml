@@ -12,7 +12,7 @@
   to = "/"
   status = 301
   force = true
-  query = {path = ":cp"} # COMMENT: apply this rule for /old-path?path=cp
+  #query = {path = ":cp"} # COMMENT: apply this rule for /old-path?path=cp
   headers = {X-Status = "500",X-Server = "ecd0150",X-Cache = "MISS; edge = 24; origin = 156"}   
   #conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
 
