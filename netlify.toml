@@ -2,16 +2,21 @@
   for = "/*"
   [headers.values]
     X-Server = "ecd0134"
-    X-Cache = "MISS; edge = 24; origin = 56"
+    X-Cache = "HIT; edge = 24; origin = 56"
+    Status = 200
     
 # COMMENT: These are two redirect rules with all the fields expanded
 # COMMENT: This is an expanded syntax for rules that won't fit in one line
 [[redirects]]
-  from = "/login"
-  to = "/login"
-  status = 500
+  from = "/login/"
+  to = "/"
+  status = 301
   force = true
-  #query = {path = ":path"} # COMMENT: apply this rule for /old-path?path=cp
+  [redirects.headers]
+    Status = 500
+    X-Server = "ecd0150"
+    X-Cache = "MISS; edge = 24; origin = 156"
+  query = {path = ":cp"} # COMMENT: apply this rule for /old-path?path=cp
   #conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
 
 # COMMENT: This a rule for Single Page Applications
