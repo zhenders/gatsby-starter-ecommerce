@@ -3,7 +3,7 @@
   [headers.values]
     X-Server = "ecd0134"
     X-Cache = "HIT; edge = 24; origin = 56"
-    Status = 200
+    X-Status = "200"
     
 # COMMENT: These are two redirect rules with all the fields expanded
 # COMMENT: This is an expanded syntax for rules that won't fit in one line
@@ -13,7 +13,7 @@
   status = 301
   force = true
   [redirects.headers]
-    Status = 500
+    X-Status = "500"
     X-Server = "ecd0150"
     X-Cache = "MISS; edge = 24; origin = 156"
   query = {path = ":cp"} # COMMENT: apply this rule for /old-path?path=cp
