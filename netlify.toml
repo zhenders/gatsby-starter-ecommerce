@@ -1,0 +1,21 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Server = "ecd0134"
+    X-Cache = "MISS; edge = 24; origin = 56"
+    
+# COMMENT: These are two redirect rules with all the fields expanded
+# COMMENT: This is an expanded syntax for rules that won't fit in one line
+[[redirects]]
+  from = "/login"
+  to = "/login"
+  status = 500
+  force = true
+  #query = {path = ":path"} # COMMENT: apply this rule for /old-path?path=cp
+  #conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+
+# COMMENT: This a rule for Single Page Applications
+##[[redirects]]
+ ## from = "/*"
+ ## to = "/index.html"
+ ## status = 200
