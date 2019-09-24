@@ -23,7 +23,7 @@
   ##X-Server: lmn123
   ##X-Via: CDN1
   ##X-Backend-Status: 200 
-/product/*
+/product/*/
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Server: hij123
