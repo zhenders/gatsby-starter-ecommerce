@@ -1,3 +1,4 @@
 /login / 301
 
-/cart id=:id  /:id  301
+/cart/  /register 404  Country=gb,ca,cn
+
