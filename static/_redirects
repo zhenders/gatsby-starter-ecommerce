@@ -1,4 +1,4 @@
 /login / 301
 
-/cart  /register 404  Country=gb,ca,cn
+/cart  /register/ 404  Country=gb,ca,cn
 
