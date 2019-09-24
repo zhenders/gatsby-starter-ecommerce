@@ -1,0 +1,15 @@
+## A path:
+/login
+  # Headers for that path:
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Backend-Status: 500
+  X-Server: xyz789
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Server: abc123
+  X-Via: CDN1
+  
+  
+  
