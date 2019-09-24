@@ -1,0 +1,3 @@
+/login / 301
+
+/cart id=:id  /:id  301
