@@ -2,14 +2,21 @@
 /login
   # Headers for that path:
   X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
   X-Backend-Status: 500
   X-Server: xyz789
+  X-Via: CDN1
+/cart 
+  # Headers for that path:
+  X-Frame-Options: DENY
+  X-Backend-Status: 500
+  X-Server: qrs456
+  X-Via: CDN2
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Server: abc123
   X-Via: CDN1
+  X-Backend-Status: 200
   
   
   
