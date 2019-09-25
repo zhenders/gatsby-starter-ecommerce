@@ -17,13 +17,19 @@
   X-XSS-Protection: 1; mode=block
   X-Server: def123
   X-Via: CDN1
-  X-Backend-Status: 200 
+  X-Backend-Status: 200
+/cart
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Server: tuv123
+  X-Via: CDN2
+  X-Backend-Status: 500
 /login/
-  ##X-Frame-Options: DENY
-  ##X-XSS-Protection: 1; mode=block
-  ##X-Server: lmn123
-  ##X-Via: CDN1
-  ##X-Backend-Status: 200 
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Server: lmn123
+  X-Via: CDN1
+  X-Backend-Status: 200 
 /product/*/
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
