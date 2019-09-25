@@ -1,11 +1,18 @@
 ## A path:
+/
+# Headers for that path:
+  X-Frame-Options: DENY
+  X-Backend-Status: 500
+  X-Server: xyz789
+  X-Via: CDN1
+  Server-Timing: cdn-cache; desc-HIT, edge; dur=145; dur=110
 /login
   # Headers for that path:
   X-Frame-Options: DENY
   X-Backend-Status: 500
   X-Server: xyz789
   X-Via: CDN1
-  Server-Timing: cdn-cache; desc-MISS, edge; dur=145; dur=451
+  Server-Timing: cdn-cache; desc-MISS, edge; dur=145; origin; dur=451
 /register/
   # Headers for that path:
   X-Frame-Options: DENY
@@ -18,19 +25,21 @@
   X-Server: def123
   X-Via: CDN1
   X-Backend-Status: 200
+  Server-Timing: cdn-cache; desc-MISS, edge; dur=145; origin; dur=245
 /cart
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Server: tuv123
   X-Via: CDN2
   X-Backend-Status: 500
-/login/
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
-  X-Server: lmn123
-  X-Via: CDN1
-  X-Backend-Status: 200 
-/product/*/
+  Server-Timing: cdn-cache; desc-HIT, edge; dur=123; origin; dur=1300
+#/login/
+#  X-Frame-Options: DENY
+#  X-XSS-Protection: 1; mode=block
+#  X-Server: lmn123
+#  X-Via: CDN1
+#  X-Backend-Status: 200 
+/product/*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Server: hij123
