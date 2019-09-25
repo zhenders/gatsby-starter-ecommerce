@@ -2,7 +2,7 @@
 /
 # Headers for that path:
   X-Frame-Options: DENY
-  X-Backend-Status: 500
+  X-Backend-Status: 200
   X-Server: xyz789
   X-Via: CDN1
   Server-Timing: cdn-cache; desc-HIT, edge; dur=145; dur=110
